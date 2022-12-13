@@ -54,7 +54,7 @@ public class SampleEncoder {
         final int fileSize = (int) inputFile.length();
 
         // Figure out how big each shard will be.  The total size stored
-        // will be the file size (8 bytes) plus the file.
+        // will be the file size (4 bytes) plus the file.
         final int storedSize = fileSize + BYTES_IN_INT;
         final int shardSize = (storedSize + DATA_SHARDS - 1) / DATA_SHARDS;
 
@@ -90,7 +90,7 @@ public class SampleEncoder {
             OutputStream out = new FileOutputStream(outputFile);
             out.write(shards[i]);
             out.close();
-            System.out.println("wrote " + outputFile);
+            System.out.println("Wrote " + outputFile);
         }
     }
 }

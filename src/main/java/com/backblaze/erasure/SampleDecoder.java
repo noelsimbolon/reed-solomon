@@ -39,10 +39,13 @@ public class SampleDecoder {
             return;
         }
         final File originalFile = new File(arguments[0]);
+
+        /*
         if (!originalFile.exists()) {
             System.out.println("Cannot read input file: " + originalFile);
             return;
         }
+        */
 
         // Read in any of the shards that are present.
         // (There should be checking here to make sure the input
